@@ -27,7 +27,7 @@ class Particle {
         // Velocity
         this.vel = createVector(random(-2, 2), random(-2, 2));
         // Size
-        this.size = 10;
+        this.size = random(5, 15);
         // color
         this.color = color(random(255), random(255), random(255));
     }
@@ -62,7 +62,7 @@ class Particle {
             const d = dist(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y);
 
             if(d < 120) {
-                stroke('white');
+                stroke(this.color);
                 line(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y);
             }
         });
