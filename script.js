@@ -23,13 +23,18 @@ class Particle {
         this.size = 10;
     }
 
+// update movement by adding velocity
     update() {
         this.pos.add(this.vel);
     }
 
+// draw single particle
     draw() {
         noStroke();
         fill(0);
         circle(this.pos.x, this.pos.y, this.size);
     }
+
+    // detect edges
+    edges() {}
 }
