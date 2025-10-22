@@ -1,7 +1,16 @@
 const particles = [];
+let athenaColors;
 
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
+
+    // define colors after p5 is ready
+    athenaColors = [
+        color('#933633'), // dark red/brown
+        color('#ffc06e'), // yellow/orange
+        color('#b27a59'), // light brown
+        color('#ffffff') // white
+];
 
     const particlesLength = Math.floor(window.innerWidth / 10);
 
@@ -29,7 +38,7 @@ class Particle {
         // Size
         this.size = random(5, 15);
         // color
-        this.color = color(random(255), random(255), random(255));
+        this.color = random(athenaColors);
     }
 
 // update movement by adding velocity
