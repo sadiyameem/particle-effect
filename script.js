@@ -1,12 +1,27 @@
+let p;
+
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
+
+    p = new Particle();
 }
 
 function draw() {
-if (mouseIsPressed) {
-    fill(0);
-} else {
-    fill(100);
+    p.draw();
+
 }
-    circle(150, 150, 80);
+
+class Particle {
+    constructor() {
+        // Position
+        this.pos = createVector(random(width), random(height));
+        // Size
+        this.size = 10;
+    }
+
+    draw() {
+        noStroke();
+        fill(black);
+        circle(this.pos.x, this.pos.y, this.size);
+    }
 }
