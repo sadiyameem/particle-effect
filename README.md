@@ -2,7 +2,7 @@
 
 # Description
 This project is built with HTML, CSS and JavaScript with P5.JS library.
-Particles move randomly across the screen, connect when close, and come in different colors.
+Particles move randomly across the screen, connects together with lines, and come in different colors.
 This is inspired by Athena Awards.
 
 # Features
