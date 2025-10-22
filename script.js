@@ -60,7 +60,7 @@ class Particle {
             const d = dist(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y);
 
             if(d < 120) {
-                stroke('black');
+                stroke('white');
                 line(this.pos.x, this.pos.y, particle.pos.x, particle.pos.y);
             }
         });
