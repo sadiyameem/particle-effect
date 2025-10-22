@@ -28,6 +28,8 @@ class Particle {
         this.vel = createVector(random(-2, 2), random(-2, 2));
         // Size
         this.size = 10;
+        // color
+        this.color = color(random(255), random(255), random(255));
     }
 
 // update movement by adding velocity
@@ -39,7 +41,7 @@ class Particle {
 // draw single particle
     draw() {
         noStroke();
-        fill(0);
+        fill(this.color);
         circle(this.pos.x, this.pos.y, this.size);
     }
 
